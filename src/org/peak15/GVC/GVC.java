@@ -20,7 +20,12 @@ public class GVC {
 			if(args.length > 0) {
 				String[] newArgs = new String[args.length - 1];
 				System.arraycopy(args, 1, newArgs, 0, args.length - 1);
-				gvclib.runCommand(args[0], newArgs);
+				if(gvclib.runCommand(args[0], newArgs)) {
+					System.exit(0);
+				}
+				else {
+					System.exit(1);
+				}
 			}
 			else {
 				// Run the help command if none is specified.
