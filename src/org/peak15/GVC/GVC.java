@@ -15,6 +15,8 @@ public class GVC {
 		gvclib.registerCommand(new Help(gvclib));
 		gvclib.registerCommand(new Init(gvclib));
 		gvclib.registerCommand(new Debug(gvclib));
+		gvclib.registerCommand(new Commit(gvclib));
+		gvclib.registerCommand(new Ignore(gvclib));
 		
 		try {
 			// Run the command specified.
